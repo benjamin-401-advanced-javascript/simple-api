@@ -2,7 +2,7 @@
 
 ## Simple API
 
-### Author: Benjamin Clark
+### Author: Benjamin Clark 
 
 ### Links and Resources
 * [submission PR](https://github.com/benjamin-401-advanced-javascript/class-05/pull/2)
