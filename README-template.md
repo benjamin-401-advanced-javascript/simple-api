@@ -14,5 +14,4 @@
 * [styleguide](http://xyz.com) (React assignments)
 
 
-#### UML
 ![UML Diagram TEST](bitmoji.png)
