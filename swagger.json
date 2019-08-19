@@ -1,0 +1,296 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Core API",
+    "description": "The worlds funnest little API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/"
+    }
+  ],
+  "paths": {
+    "/categories": {
+      "get": {
+        "summary": "Get all categories",
+        "responses": {
+          "200": {
+            "description": "Returned a list of categories",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": 4
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "Movies"
+                    },
+                    "display_name": {
+                      "type": "string",
+                      "example": "movies"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "This is a movie category"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Creates a category.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "Movies"
+                  },
+                  "display_name": {
+                    "type": "string",
+                    "example": "movies"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "This is a movie category"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/categories/{id}": {
+      "put": {
+        "summary": "Edits a category by id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The database id of category to edit",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "object",
+            "in": "query",
+            "required": true,
+            "description": "The new category object to put in it's place",
+            "schema": {
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "Movies"
+                },
+                "display_name": {
+                  "type": "string",
+                  "example": "movies"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "This is a movie category"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "deletes a category by id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The database id of category to delete",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "summary": "Get all products",
+        "responses": {
+          "200": {
+            "description": "Returned a list of products",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "example": 4
+                    },
+                    "category": {
+                      "type": "string",
+                      "example": "Movies"
+                    },
+                    "name": {
+                      "type": "string",
+                      "example": "The Hobbit"
+                    },
+                    "display_name": {
+                      "type": "string",
+                      "example": "The Hobbit"
+                    },
+                    "description": {
+                      "type": "string",
+                      "example": "This is a good movie"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Creates a product.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "example": "The Hobbit"
+                  },
+                  "display_name": {
+                    "type": "string",
+                    "example": "the hobbit"
+                  },
+                  "description": {
+                    "type": "string",
+                    "example": "This is a test product"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/products/{id}": {
+      "put": {
+        "summary": "Edits a product by id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The database id of product to edit",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 1
+            }
+          },
+          {
+            "name": "object",
+            "in": "query",
+            "required": true,
+            "description": "The new product object to put in it's place",
+            "schema": {
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "The Hobbit"
+                },
+                "display_name": {
+                  "type": "string",
+                  "example": "the hobbit"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "This is a test product"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "summary": "deletes a product by id.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "The database id of product to delete",
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "getAll": {
+        "type": "object",
+        "example": [
+          "{}",
+          "{}"
+        ]
+      }
+    }
+  }
+}

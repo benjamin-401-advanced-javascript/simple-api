@@ -1,0 +1,77 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Books",
+      "display_name": "Books",
+      "description": "these are books"
+    },
+    {
+      "id": 2,
+      "name": "Movies",
+      "display_name": "Movies",
+      "description": "these are movies"
+    },
+    {
+      "id": 4,
+      "name": "Movies",
+      "display_name": "movies",
+      "description": "This is a movie category"
+    },
+    {
+      "id": 5,
+      "name": "test",
+      "display_name": "test",
+      "description": "This is a movie another category"
+    },
+    {
+      "name": "test2",
+      "display_name": "tes2t",
+      "description": "This is a movie another category",
+      "id": 6
+    },
+    {
+      "name": "another",
+      "display_name": "another",
+      "description": "This is a movie another category",
+      "id": 7
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "category": "Books",
+      "name": "The Hobbit",
+      "display_name": "The King",
+      "description": "this is a book by stephen king"
+    },
+    {
+      "id": 2,
+      "category": "Books",
+      "name": "the Lord of the Rings",
+      "display_name": "B. Clark",
+      "description": "this is a book by stephen king"
+    },
+    {
+      "id": 3,
+      "category": "Books",
+      "name": "The Cat in the Hat",
+      "display_name": "B. Clark",
+      "description": "this is a book by stephen king"
+    },
+    {
+      "id": 4,
+      "category": "Movies",
+      "name": "Underworld",
+      "display_name": "B. Clark",
+      "description": "test test test"
+    },
+    {
+      "id": 5,
+      "category": "Movies",
+      "name": "Getting to I do",
+      "display_name": "B. Clark",
+      "description": "test test test"
+    }
+  ]
+}
